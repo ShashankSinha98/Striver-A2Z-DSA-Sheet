@@ -1,0 +1,26 @@
+package codingninjas;
+import java.util.ArrayList;
+
+// https://www.codingninjas.com/studio/problems/rotate-array_1230543?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf
+// Rotate to Left
+public class RotateArrayByKElements {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	public static ArrayList<Integer> rotateArray(ArrayList<Integer> arr, int k) {
+        // Write your code here.
+		
+		// rotate [0:k-1] elements
+		int left=0, right=k-1;
+		while(left < right) {
+			int temp = arr.get(left);
+			arr.set(left, arr.get(right));
+			arr.set(right, temp);
+			left++, right--;
+		}
+    }
+
+}

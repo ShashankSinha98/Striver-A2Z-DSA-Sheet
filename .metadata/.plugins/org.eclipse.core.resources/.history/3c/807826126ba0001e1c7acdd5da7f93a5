@@ -1,0 +1,15 @@
+import java.util.ArrayList;
+
+// Rotate to Left
+public class RotateArrayByKElements {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	public static ArrayList<Integer> rotateArray(ArrayList<Integer> arr, int k) {
+        // Write your code here.
+    }
+
+}
