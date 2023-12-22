@@ -1,0 +1,14 @@
+public class FindSecondSmallestAndSecondLargestElementInAnArray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	public static int[] getSecondOrderElements(int n, int []a) {
+		if(a.length < 2) {
+			return new int[-1, -1];
+		}
+    }
+
+}

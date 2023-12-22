@@ -1,0 +1,2 @@
+INDEX VERSION 1.131+G:\My Drive\Code\striver-a2z-workspace\.metadata\.plugins\org.eclipse.jdt.core
+3413270776.index
