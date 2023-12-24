@@ -1,0 +1,67 @@
+package codingninjas;
+
+import java.util.*;
+public class UnionOfTwoSortedArrays {
+
+	public static void main(String[] args) {
+		
+		int[] arr = new int[] {1,1,2,2,2,3,3};
+		System.out.println(removeDuplicates(arr, arr.length,7));
+
+	}
+	
+	public static List<Integer> sortedArray(int []a, int []b) {
+		if(a.length==0) return removeDuplicates(b, b.length);
+		else if(b.length==0) return removeDuplicates(a, a.length);
+		
+		int i=0, j=0;
+		List<Integer> res = new ArrayList<>();
+		
+		while(i<a.length && j<b.length) {
+			if(a[i] < b[j]) {
+				if(res.isEmpty() || res.get(res.size()-1)!=a[i]) {
+					res.add(a[i]);
+				}
+				i++;
+			} else if(b[j] < a[i]) {
+				if(res.isEmpty() || res.get(res.size()-1)!=b[j]) {
+					res.add(b[j]);
+				}
+				j++;
+			} else {
+				if(res.isEmpty() || res.get(res.size()-1)!=b[j]) {
+					res.add(b[j]);
+				}
+				i++; j++;
+			}
+		}
+		
+		if(i < a.length) {
+			res.add(removeDuplicates(a, a.length, i));
+		}
+    }
+	
+	public static List<Integer> removeDuplicates(int[] arr,int n) {
+		return removeDuplicates(arr, n, 0);
+	}
+	
+	public static List<Integer> removeDuplicates(int[] arr,int n, int startIdx) {
+		if(n==0 || startIdx >= n) return new ArrayList<>();
+		
+		int unique_index = startIdx;
+		for(int i=startIdx+1; i<n; i++) {
+			int ai = arr[i];
+			if(ai != arr[unique_index]) {
+				arr[++unique_index] = ai;
+			}
+		}
+		
+		List<Integer> res = new ArrayList<>();
+		for(int i=startIdx; i<=unique_index; i++) {
+			res.add(arr[i]);
+		}
+		
+		return res;
+	}
+
+}

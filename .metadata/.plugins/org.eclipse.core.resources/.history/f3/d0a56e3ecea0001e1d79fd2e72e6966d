@@ -1,0 +1,35 @@
+package codingninjas;
+
+import java.util.*;
+public class UnionOfTwoSortedArrays {
+
+	public static void main(String[] args) {
+
+	}
+	
+	public static List< Integer > sortedArray(int []a, int []b) {
+		
+    }
+	
+	public static int[] removeDuplicates(int[] arr,int n) {
+		if(arr.length < 2) {
+			return arr;
+		}
+		
+		int unique_index = 0;
+		for(int i=1; i<arr.length; i++) {
+			int ai = arr[i];
+			if(ai != arr[unique_index]) {
+				arr[++unique_index] = ai;
+			}
+		}
+		
+		int[] res = new int[unique_index+1];
+		for(int i=0; i<=unique_index; i++) {
+			res[i] = arr[i];
+		}
+		
+		return res;
+	}
+
+}

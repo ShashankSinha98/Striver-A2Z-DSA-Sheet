@@ -10,6 +10,7 @@ public class RemoveDuplicatesInPlaceFromSortedArray {
 		ArrayList<Integer> list = new ArrayList<>();
 		for(int ai: arr) list.add(ai);
 		int ans = removeDuplicates(list, list.size());
+		System.out.println(list);
 		System.out.println(ans);
 	}
 	

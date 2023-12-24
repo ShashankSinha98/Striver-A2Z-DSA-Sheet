@@ -1,0 +1,13 @@
+package codingninjas;
+
+public class UnionOfTwoSortedArrays {
+
+	public static void main(String[] args) {
+
+	}
+	
+	public static List< Integer > sortedArray(int []a, int []b) {
+        // Write your code here
+    }
+
+}
