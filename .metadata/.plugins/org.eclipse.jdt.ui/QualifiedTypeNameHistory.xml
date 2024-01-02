@@ -7,15 +7,16 @@
     <fullyQualifiedTypeName name="leetcode.CheckIfArrayIsSortedAndRotated"/>
     <fullyQualifiedTypeName name="leetcode.NextPermutation"/>
     <fullyQualifiedTypeName name="com.sun.tools.javac.util.List"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.HashSet"/>
     <fullyQualifiedTypeName name="leetcode.LongestConsecutiveSequence"/>
     <fullyQualifiedTypeName name="leetcode.SetMatrixZero"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="leetcode.SpiralTraversalOfMatrix"/>
     <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="codingninjas.CountSubarraySumEqualsK"/>
     <fullyQualifiedTypeName name="leetcode.RotateImageBy90Degree"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="leetcode.PascalsTriangle"/>
 </qualifiedTypeNameHistroy>
