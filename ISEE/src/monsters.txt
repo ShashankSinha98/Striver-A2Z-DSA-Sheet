@@ -1,0 +1,20 @@
+Monster
+name Kunibert
+maxHP 80
+attack 15
+weight 10.0
+multi 1.0
+
+Monster
+name Kunibert II
+maxHP 120
+attack 25
+weight 42.7
+multi 1.5
+
+Monster
+name Kunibert der Heiler
+maxHP 120
+attack -5
+weight 50.0
+multi 1.0

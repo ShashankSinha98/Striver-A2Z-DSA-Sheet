@@ -1,4 +1,4 @@
-interface IMonster {
+interface IMonstera {
     /** Return the name of the Monster */
     public String getName();
   
