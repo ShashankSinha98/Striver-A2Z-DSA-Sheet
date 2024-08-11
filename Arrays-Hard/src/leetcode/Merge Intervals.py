@@ -28,6 +28,6 @@ class Solution(object):
 
 if __name__ == "__main__":
     s = Solution()
-    intervals = [[1,4],[0,4]]
+    intervals = [[1,10],[2,15],[3,30]]
     print(s.merge(intervals))
         

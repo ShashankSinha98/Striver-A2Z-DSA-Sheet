@@ -25,16 +25,18 @@ class Solution:
                 c = s[l]
                 l+=1
                 char_freq_dict[c] -= 1
-                max_freq = 0
-                for key, v in char_freq_dict.items():
-                    if v > max_freq:
-                        max_freq = v
+                inc = True
+                r+=1
+                # max_freq = 0
+                # for key, v in char_freq_dict.items():
+                #     if v > max_freq:
+                #         max_freq = v
 
-                k_req = (r-l+1) - max_freq
+                # k_req = (r-l+1) - max_freq
 
-                if k_req <=k:
-                    inc = True
-                    r+=1
+                # if k_req <=k:
+                #     inc = True
+                #     r+=1
         
         return max_len
 
