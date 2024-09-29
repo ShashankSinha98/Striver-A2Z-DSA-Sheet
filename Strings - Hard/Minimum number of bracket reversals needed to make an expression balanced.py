@@ -1,13 +1,12 @@
 class Solution:
     def minAddToMakeValid(self, s: str) -> int:
-        obc=0
-        req=0
-        for si in s:
-            if si=='(':
-                obc+=1
-            else:
-                if obc >0:
-                    obc-=1
+        st = []
+        for i in s:
+            if i=='(':
+                st.append(i)
+            elif i==')':
+                if len(st)>0 and st[-1]=='(':
+                    st.pop()
                 else:
-                    req+=1
-        return req+obc
+                    st.append(i)
+        return len(st)
