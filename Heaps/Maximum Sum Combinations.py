@@ -17,13 +17,13 @@ class Solution:
             mSum, i, j = heapq.heappop(heap)
             res.append(-1*mSum)
 
-            if i-1>=0: #and (i-1,j) not in s:
+            if i-1>=0 and (i-1,j) not in s:
                 heapq.heappush(heap, (-1*(A[i-1]+B[j]), i-1, j))
-                #s.add((i-1,j))
+                s.add((i-1,j))
             
-            if j-1>=0: #and (i,j-1) not in s:
+            if j-1>=0 and (i,j-1) not in s:
                 heapq.heappush(heap, (-1*(A[i]+B[j-1]), i, j-1))
-                #s.add((i,j-1))
+                s.add((i,j-1))
 
         return res
 

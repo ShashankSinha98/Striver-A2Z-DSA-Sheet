@@ -28,14 +28,15 @@ class Solution:
                 if num_map[tmp]==0:
                     heapq.heappop(heap)
                 tmp = tmp+1
+                
         
         return True
 
 
 if __name__ == "__main__":
     s = Solution()
-    hand = [1,2,3,4,5]
-    groupSize = 4
+    hand = [1,1,2,3,4,5]
+    groupSize = 3
     ans = s.isNStraightHand(hand, groupSize)
     print(ans)
                 

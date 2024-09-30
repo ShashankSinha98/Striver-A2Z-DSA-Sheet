@@ -54,7 +54,7 @@ class Solution:
                 n_map[i] = 0
             n_map[i]+=1
         
-        bucket = [None]*len(nums)
+        bucket = [None]*(len(nums)+1)
         
         for ki in n_map.keys():
             c = n_map[ki]
