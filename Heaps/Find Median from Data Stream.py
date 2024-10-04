@@ -8,39 +8,24 @@ class MedianFinder:
         
 
     def addNum(self, num: int) -> None:
-        # adding
-        if len(self.maxHeap)==0:
-            heapq.heappush(self.maxHeap, -1*num)
-        elif len(self.minHeap)==0:
-            if num > -1*self.maxHeap[0]:
-                heapq.heappush(self.minHeap, num)
-            else:
-                tmp = -1*heapq.heappop(self.maxHeap)
-                heapq.heappush(self.maxHeap, -1*num)
-                heapq.heappush(self.minHeap, tmp)
+        # adding to max heap by default
+        heapq.heappush(self.maxHeap, -1*num)
 
-        else:
-            left = -1*self.maxHeap[0]
-            right = self.minHeap[0]
+        # checking if maxheap top <= minheap top
+        if len(self.minHeap)>0 and not (-1)*self.maxHeap[0] <= self.minHeap[0]:
+            tmp = -1*heapq.heappop(self.maxHeap)
+            heapq.heappush(self.minHeap, tmp)
 
-            if num<=left:
-                heapq.heappush(self.maxHeap, -1*num)
-            else:
-                heapq.heappush(self.minHeap, num)
-            
-            # balancing
-            if len(self.maxHeap)-len(self.minHeap)>1:
-                tmp = -1*heapq.heappop(self.maxHeap)
-                heapq.heappush(self.minHeap, tmp)
-            elif len(self.minHeap)-len(self.maxHeap)>1:
-                tmp = heapq.heappop(self.minHeap)
-                heapq.heappush(self.maxHeap, -1*tmp)
-        
+        # balancing length
+        if len(self.maxHeap)-len(self.minHeap)>1:
+            tmp = -1*heapq.heappop(self.maxHeap)
+            heapq.heappush(self.minHeap, tmp)
+        elif len(self.minHeap)-len(self.maxHeap)>1:
+            tmp = heapq.heappop(self.minHeap)
+            heapq.heappush(self.maxHeap, -1*tmp)    
 
 
     def findMedian(self) -> float:
-        print(self.maxHeap)
-        print(self.minHeap)
         if len(self.minHeap)==0 and len(self.maxHeap)==0:
             return None
         
@@ -56,12 +41,8 @@ class MedianFinder:
     
 if __name__ == "__main__":
     medianFinder = MedianFinder()
-    medianFinder.addNum(-1)
-    medianFinder.addNum(-2)
+    medianFinder.addNum(1)
+    medianFinder.addNum(2)
     print(medianFinder.findMedian())
-    medianFinder.addNum(-3)
-    print(medianFinder.findMedian())
-    medianFinder.addNum(-4)
-    print(medianFinder.findMedian())
-    medianFinder.addNum(-5)
+    medianFinder.addNum(3)
     print(medianFinder.findMedian())

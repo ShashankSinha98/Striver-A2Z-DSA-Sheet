@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "DiameterOfBinaryTree",
+            "request": "launch",
+            "mainClass": "DiameterOfBinaryTree",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "BalancedBinaryTree",
+            "request": "launch",
+            "mainClass": "BalancedBinaryTree",
+            "projectName": ""
+        },
+        {
+            "type": "java",
             "name": "CheckIfArrayIsSortedAndRotated",
             "request": "launch",
             "mainClass": "leetcode.CheckIfArrayIsSortedAndRotated",
