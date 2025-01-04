@@ -12,7 +12,7 @@ class Solution:
         elif root==p:
             return p
         elif root==q:
-            return q
+            return q 
         
         left = self.lowestCommonAncestor(root.left, p, q)
         right = self.lowestCommonAncestor(root.right, p, q)

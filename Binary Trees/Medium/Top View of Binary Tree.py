@@ -12,10 +12,10 @@ class Solution:
         map = {}
         self.__verticalMapping(root, 0, 0, map)
         cols = list(map.keys())
-        cols.sort()
+        st_col = min(cols)
         res = []
 
-        for ci in cols:
+        for ci in range(st_col, st_col+len(cols)):
             rows = list(map[ci].keys())
             r = min(rows)
             res.append(map[ci][r][0])

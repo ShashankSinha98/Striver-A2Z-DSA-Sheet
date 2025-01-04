@@ -4,6 +4,21 @@ import queue
 
 
 class Solution:
+    def rightSideView2(self, root: Optional[TreeNode]) -> List[int]:
+        def __itr(root: Optional[TreeNode], lvl: int, res: List[int]):
+            if root==None:
+                return
+            
+            if lvl==len(res):
+                res.append(root.val)
+            
+            __itr(root.right, lvl+1, res)
+            __itr(root.left, lvl+1, res)
+        
+        res = []
+        __itr(root, 0, res)
+        return res
+            
     def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
         if root==None:
             return
@@ -44,5 +59,5 @@ class Solution:
 if __name__ == "__main__":
     s = Solution()
     r = TreeNode(1, left=TreeNode(2,left=TreeNode(4)), right=TreeNode(3))
-    print(s.rightSideView(r))
+    print(s.rightSideView2(r))
         

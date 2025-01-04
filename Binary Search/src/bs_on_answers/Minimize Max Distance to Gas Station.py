@@ -32,3 +32,9 @@ def _is_possible(arr, k, gap_lim):
             return False
 
     return True 
+
+
+if __name__ == "__main__":
+    arr = [1,5,8,10]
+    k = 5
+    print(minimiseMaxDistance(arr, k))

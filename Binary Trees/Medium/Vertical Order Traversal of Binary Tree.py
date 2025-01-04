@@ -7,10 +7,10 @@ class Solution:
         map = {}
         self.__verticalMapping(root,0, 0, map)
         cols = list(map.keys())
-        cols.sort()
+        col_st = min(cols)
 
         res = []
-        for c in cols:
+        for c in range(col_st, col_st+len(cols)):
             rows = list(map[c].keys())
             rows.sort()
             tmp = []
